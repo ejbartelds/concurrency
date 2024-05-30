@@ -44,6 +44,7 @@ class Developer implements Callable<String> {
                     if (right.tryLock()) {
                         try {
                             System.out.printf("(%d) Ik pak een laptop%n", id);
+                            return;
                         } finally {
                             right.unlock();
                         }
